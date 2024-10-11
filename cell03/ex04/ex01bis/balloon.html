@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .balloon:hover {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div id="balloon" class="balloon"></div>
+
+  <script>
+    let size = 200;
+    let colors = ['red', 'green', 'blue'];
+    let colorIDX = 0;
+
+    $('#balloon').on('click', function() {
+      size += 10;
+      colorIDX = (colorIDX + 1) % colors.length;
+
+      if (size > 420) {
+        size = 200;
+        colorIDX = 0;
+      }
+
+      $(this).css({
+        'width': `${size}px`,
+        'height': `${size}px`,
+        'background-color': colors[colorIDX]
+      });
+    });
+
+    $('#balloon').on('mouseleave', function() {
+      size -= 5;
+
+      if (size < 200) {
+        size = 200;
+        colorIDX = colors.length - 1;
+      }
+
+      $(this).css({
+        'width': `${size}px`,
+        'height': `${size}px`,
+        'background-color': colors[colorIDX]
+      });
+
+      colorIDX = (colorIDX - 1 + colors.length) % colors.length;
+    });
+  </script>
+</body>
+</html>

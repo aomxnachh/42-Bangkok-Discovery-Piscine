@@ -1,0 +1,37 @@
+body,html{
+    height: 100%;
+    margin: 0;
+    font-size: 30px;
+    color: rgb(0, 17, 250);
+}
+
+.pimg1{
+    background-image:url('https://pbs.twimg.com/media/E6PW-BRVcAABtNL.jpg');
+    min-height: 100%;
+}
+
+.pimg2{
+    background-color:#000;
+    min-height: 100%;
+}
+
+.pimg3{
+    background-image:url('https://media.discordapp.net/attachments/1261649413705568306/1282758251456233524/456883407_1017863083355005_8405603398955095008_n.jpg?ex=66e12df7&is=66dfdc77&hm=490b400cd5915a916f52b141ae257c7b0a8bfb9381697753bf9a2b7c5660e61a&=&format=webp&width=538&height=720');
+    min-height: 100%;
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}

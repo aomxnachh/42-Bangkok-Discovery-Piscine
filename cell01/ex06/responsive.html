@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+        }
+
+        .td1 {
+            background-color: rgb(255, 85, 145);
+        }
+
+        .td2 {
+            background-color: rgb(255, 255, 40);
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            table,
+            td {
+                width: 100%;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="td1">First cell</td>
+            <td class="td2">Second cell</td>
+        </tr>
+    </table>
+</body>
+
+</html>

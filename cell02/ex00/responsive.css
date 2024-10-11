@@ -1,0 +1,25 @@
+.td1{
+    background:rgb(116, 219, 164);height: 100px;
+}
+
+.td2{
+    background:rgb(160, 194, 224);height: 100px;
+}
+
+table{
+    width:100%; 
+    border:1;
+}
+
+@media only screen and (max-width: 600px) {
+
+    table,
+    td {
+        width: 100%;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+}

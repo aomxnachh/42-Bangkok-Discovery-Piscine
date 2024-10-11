@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+}
+body{
+    background-color: #1d1d1d;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* navigative bar */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color:#181818;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    margin: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+}
+.logo span{
+    color: #E39E20;
+}
+.navbar{
+    margin: 50px;
+}
+.navbar-btn {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+}
+.navbar-btn:hover{
+    color: #E39E20;
+    transition: 0.3s ;
+}
+.contect-btn{
+    text-decoration: none;
+    background-color: #E39E20;
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 17px;
+    border-radius: 5px;
+    margin: 20px;
+}
+.contect-btn:active{
+    background-color: #bd8319;
+}
+
+/* main page */
+.main-content{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    color: #fff;
+    background-image: url('https://img.freepik.com/free-vector/zigzag-lines-pattern-black-background_1017-37483.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1726185600&semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+}
+.main-content p{
+    font-size: 25px;
+}
+.main-content h1{
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+}
+.main-content h1 span{
+    font-size: 170px;
+    color: #E39E20;
+    font-family: "Oswald", sans-serif;
+}
+/* about page */
+.about{
+    height: fit-content;
+    background-color: #F9F5F2;
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+.about-content .photo img{
+    height: 600px;
+    width: fit-content;
+    border-radius: 50%;
+    margin: 50px;
+}
+.about-content .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+.about-content .text h1{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E39E20;
+    font-family: "Playwrite CU", cursive;
+}
+.about-content .text h3{
+    font-family: "Oswald", sans-serif;
+    font-size: 35px;
+    margin: 10px;
+}
+.about-content .text p{
+    font-size: 20px;
+}
+.about-content .text .icon{
+    margin: 20px;
+}
+.about-content .text .icon i{
+    font-size: 30px;
+    margin: 10px;
+    color: #E39E20;
+}
+
+/* project page */
+.project{
+    height: fit-content;
+    background-color: #1d1d1d;
+}
+.project-content .text h1{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E39E20;
+    font-family: "Playwrite CU", cursive;  
+    margin-top: 30px;
+}
+.wrapper{
+    padding: 10px 50px;
+}
+.card{
+    padding: 50px 0; 
+ }
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+.box{
+    border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlay{
+    width: fit-content;
+	height: 0;
+	background: #F9F5F2;
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 20px;
+	text-align: center;
+	font-size: 15px;
+	transition: height 0.5s;
+}
+.overlay h3{
+    font-weight: bolder;
+	font-size: 25px;
+    color: #313131;
+}
+.overlay a button{
+    margin-top: 10px;
+	color: #313131;
+	text-decoration: none;
+	font-size: 15px;
+	padding: 5px 15px;
+    background-color: #ebe5e1;
+    border-color: #313131;
+    border-style:solid;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.overlay a button:hover{
+    background-color: #313133;
+    color: #fff;
+}
+.box:hover img{
+    transform: scale(1.2);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+/* experience page */
+.experience{
+    height: fit-content;
+    background-color: #F9F5F2;
+}
+.experience-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.experience-content .text h1{
+    font-size: 40px;
+    color: #E39E20;
+    font-family: "Playwrite CU", cursive;  
+    margin-top: 30px;
+}
+.experience-content .timeline{
+    margin: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 3px #d3d3d3;
+}
+.experience-content .timeline ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.experience-content .timeline ul li a{
+    text-decoration: none;
+}
+.experience-content .timeline ul li span{
+    font-size: 15px;
+    color: #999;
+    display: block;
+    padding-left: 20px;
+    position: relative;
+}
+.experience-content .timeline ul li span::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 3px solid #E39E20;
+    top: 2px;
+    left: 0;
+    border-radius: 50px;
+}
+.experience-content .timeline ul li h3{
+    font-size: 20px;
+    line-height: 30px;
+    border: 3px solid #E39E20;
+    border-width: 0 0 0 3px;
+    padding: 5px 0 5px 16px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    color: #313133;
+}
+
+/* contact page */
+.contact{
+    height: fit-content;
+    background-color: #1d1d1d;
+}
+.contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    
+}
+.contact-content .text h1{
+    font-size: 40px;
+    color: #E39E20;
+    font-family: "Playwrite CU", cursive;
+    margin-top: 30px;
+}
+.contact-content .social a{
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+}
+.contact-content .social a i{
+    color: #fff;
+    background-color: #E39E20;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.contact-content .social a span{
+    color: #fff;
+}
+footer{
+	text-align: center;
+	justify-content: center;
+	background-color: #E39E20;
+	padding: 10px 0px;
+	color: #f9f9ff;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 80rem) {
+    .header {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .logo {
+        overflow: hidden;
+        margin: 10px 10px;
+    }
+    .navbar {
+        align-items: center;
+        display: flex;
+    }
+    .navbar-btn {
+        font-size: 15px;
+        margin: 5px;
+    }
+    .contect-btn{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .main h1{
+        font-size: 30px;
+    }
+    .main h1 span{
+        font-size: 60px;
+    }
+    .about-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+    .about-content .text h3{
+        font-size: 25px;
+    }
+    .about-content .text p{
+        font-size: 15px;
+    }
+    .about-content .icon{
+        font-size: 15px;
+    }
+    .about-content .photo img{
+        height: 400px;
+        width: fit-content;
+        border-radius: 50%;
+        margin: 30px;
+    }
+}
